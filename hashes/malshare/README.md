@@ -1,24 +1,25 @@
-# Malshare SHA256 — Daily Feed
+# Malshare SHA256 — Cumulative Feed
 
 Sync automat din [malshare.com](https://malshare.com).
-**Ultima actualizare:** 2026-04-28 06:19 UTC
+**Ultima actualizare:** 2026-04-28 06:25 UTC
+**Total hash-uri:** 34
 
-## Fișiere
+## Fișier
 
 | Fișier | Conținut |
 |--------|----------|
-| `latest.txt` | SHA256 din ziua curentă (34 hash-uri) |
-| `YYYY-MM-DD.txt` | Archive zilnice |
+| `hash.txt` | Toate SHA256-urile colectate, fără duplicate, sortat |
 
 ## Format
 
-Un SHA256 per linie (64 caractere hex), deduplicat și sortat.
+Un SHA256 per linie (64 caractere hex). La fiecare rulare se adaugă
+doar hash-urile noi față de versiunea anterioară.
 
 ## Utilizare în Microsoft Defender (KQL)
 
 ```kql
 let sha256_feed = externaldata(hash: string)
-    [@"https://raw.githubusercontent.com/ClaudiusDecimius/ioc-ipsets/main/hashes/malshare/latest.txt"]
+    [@"https://raw.githubusercontent.com/ClaudiusDecimius/ioc-ipsets/main/hashes/malshare/hash.txt"]
     with (format="txt", ignoreFirstRecord=false);
 DeviceFileEvents
 | where SHA256 in (sha256_feed)

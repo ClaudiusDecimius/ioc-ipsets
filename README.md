@@ -1,7 +1,7 @@
 # IOC IP Sets — FireHOL Mirror
 
 Sync automat din [iplists.firehol.org](https://iplists.firehol.org).
-**Ultima actualizare:** 2026-09-22 05:49 UTC
+**Ultima actualizare:** 2026-09-22 06:49 UTC
 
 ## Structură
 

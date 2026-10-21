@@ -1,8 +1,8 @@
 # Malshare SHA256 — Cumulative Feed
 
 Sync automat din [malshare.com](https://malshare.com).
-**Ultima actualizare:** 2026-10-20 01:38 UTC
-**Total hash-uri:** 613
+**Ultima actualizare:** 2026-10-21 07:39 UTC
+**Total hash-uri:** 626
 
 ## Fișier
 
